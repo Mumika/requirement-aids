@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../static/css/haiersoft.css" rel="stylesheet" type="text/css" media="screen,print"/>
+    <link href="../static/css/print.css" rel="stylesheet" type="text/css" media="print"/>
+    <script src="../static/js/jquery-1.10.1.min.js"></script>
+    <script src="../static/js/side.js" type="text/javascript"></script>
+    <style type="text/css">
+        button {
+            height: 33px;
+            line-height: 33px;
+            vertical-align: middle;
+            border: none;
+            font-size: 16px;
+            background-color: #1fbba6;
+            padding: 0px 10px;
+            color: #FFF;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        select {
+            width: 170px
+        }
+    </style>
+</head>
+<body>
+<form action="" method="post">
+    {% csrf_token %}
+    <h2>根据需要，添加问题并回答</h2>
+    <table>
+        <tr>
+            <th>问题类型</th>
+            <th><select name="rid" id="gh_subject" onChange="move()">
+                <option selected>-- 请选择 --</option>
+                <option value="1">受众范围</option>
+                <option value="2">软件风格</option>
+                <option value="3">性能要求</option>
+                <option value="4">用户体验</option>
+            </select>
+            </th>
+        </tr>
+        <tr>
+            <th>问题</th>
+            <th>
+                <select name='ys' id="s2">
+                    <option selected>-- 请选择 --</option>
+
+                    <!--默认选中，动态生成option -->
+                </select>
+            </th>
+        </tr>
+        <tr>
+            <th>回答</th>
+            <th><input type="text" name="queans"></th>
+        </tr>
+    </table>
+    <div id="BtmBtn">
+        <div class="btn_boxB floatR mag_l20"><a href="{% url 'main' %}"><input name="" type="button" value="取消"></a>
+        </div>
+        <div class="btn_box floatR"><input type="submit" value="提交"></div>
+    </div>
+
+</form>
+<hr>
+<h2>若问题库中没有你想要的问题，请在下方添加</h2>
+<a href="{% url 'addque' %}">
+    <button name="submitque">添加问题</button>
+</a>
+</form>
+</body>
+<script>
+    function move() {
+        var s1 = document.getElementById("gh_subject");
+        var s2 = document.getElementById("s2");
+        var add =new Array();
+        var lst1 = JSON.parse('{{ que_obj_list1|safe }}');
+        var lst2 = JSON.parse('{{ que_obj_list2|safe }}');
+        var lst3 = JSON.parse('{{ que_obj_list3|safe }}');
+        var lst4 = JSON.parse('{{ que_obj_list4|safe }}');
+        if (s1.value == "1") {
+            add = lst1;
+        } else if (s1.value == "2") {
+            add = lst2;
+        } else if (s1.value == "3") {
+            add = lst3;
+        } else if (s1.value == "4") {
+            add = lst4;
+        } else {
+            add = null;
+        }
+        s2.length = 0;
+        for (var i = 0; i < add.length; i++) {
+            var ss = new Option();
+            ss.text = add[i]
+            s2.add(ss);
+        }
+    }</script>
+</html>

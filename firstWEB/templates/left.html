@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>首页左侧导航</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/public.css"/>
+    <script type="text/javascript" src="../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/js/public.js"></script>
+    <head></head>
+
+<body id="bg">
+<!-- 左边节点 -->
+<div class="container">
+    <div class="leftsidebar_box">
+        <a href="{% url 'main' %}" target="main">
+            <div class="line">
+                <img src="../static/img/coin01.png"/>&nbsp;&nbsp;首页
+            </div>
+        </a>
+        <dl class="system_log">
+            <dt>
+                <img class="icon1" src="../static/img/coin03.png"/><img class="icon2"
+                                                                        src="../static/img/coin04.png"/>团队管理<img
+                    class="icon3"
+                    src="../static/img/coin19.png"/><img class="icon4"
+                                                         src="../static/img/coin20.png"/>
+            </dt>
+            <dd>
+                <img class="coin11" src="../static/img/coin111.png"/><img class="coin22"
+                                                                          src="../static/img/coin222.png"/><a
+                    class="cks" href="{% url 'memberlist' %}"
+                    target="main">查看成员</a><img class="icon5" src="../static/img/coin21.png"/>
+            </dd>
+            <dd>
+                <img class="coin11" src="../static/img/coin111.png"/><img class="coin22"
+                                                                          src="../static/img/coin222.png"/><a
+                    class="cks" href="{% url 'addmember' %}"
+                    target="main">添加成员信息</a><img class="icon5" src="../static/img/coin21.png"/>
+            </dd>
+        </dl>
+        <dl class="system_log">
+            <dt>
+                <img class="icon1" src="../static/img/coin01.png"/><img class="icon2"
+                                                                        src="../static/img/coin02.png"/> 项目管理<img
+                    class="icon3"
+                    src="../static/img/coin19.png"/><img class="icon4"
+                                                         src="../static/img/coin20.png"/>
+            </dt>
+            <dd>
+                <img class="coin11" src="../static/img/coin111.png"/><img class="coin22"
+                                                                          src="../static/img/coin222.png"/><a
+                    class="cks" href="{% url 'tasklist' %}"
+                    target="main">当前任务</a><img class="icon5" src="../static/img/coin21.png"/>
+            </dd>
+            <dd>
+                <img class="coin11" src="../static/img/coin111.png"/><img class="coin22"
+                                                                          src="../static/img/coin222.png"/><a
+                    class="cks" href="{% url 'addtask' %}"
+                    target="main">创建任务</a><img class="icon5" src="../static/img/coin21.png"/>
+            </dd>
+            <dd>
+                <img class="coin11" src="../static/img/coin111.png"/><img class="coin22"
+                                                                          src="../static/img/coin222.png"/><a
+                    class="cks" href="{% url 'loglist' %}"
+                    target="main">日志列表</a><img class="icon5" src="../static/img/coin21.png"/>
+            </dd>
+            <dd>
+                <img class="coin11" src="../static/img/coin111.png"/><img class="coin22"
+                                                                          src="../static/img/coin222.png"/><a
+                    class="cks" href="{% url 'addlog' %}"
+                    target="main">日志编写</a><img class="icon5" src="../static/img/coin21.png"/>
+            </dd>
+        </dl>
+        <dl class="system_log">
+            <dt>
+                <img class="icon1" src="../static/img/coin07.png"/><img class="icon2"
+                                                                        src="../static/img/coin08.png"/> 需求获取<img
+                    class="icon3"
+                    src="../static/img/coin19.png"/><img class="icon4"
+                                                         src="../static/img/coin20.png"/>
+            </dt>
+            <dd>
+                <img class="coin11" src="../static/img/coin111.png"/><img class="coin22"
+                                                                          src="../static/img/coin222.png"/><a
+                    href="{% url 'addsetting' %}" target="main"
+                    class="cks">背景及业务目标</a><img class="icon5" src="../static/img/coin21.png"/>
+            </dd>
+            <dd>
+                <img class="coin11" src="../static/img/coin111.png"/><img class="coin22"
+                                                                          src="../static/img/coin222.png"/><a
+                    href="{% url 'addhoder' %}" target="main"
+                    class="cks">干系人识别</a><img class="icon5" src="../static/img/coin21.png"/>
+            </dd>
+            <dd>
+                <img class="coin11" src="../static/img/coin111.png"/><img class="coin22"
+                                                                          src="../static/img/coin222.png"/><a
+                    href="{% url 'selectmodel' %}" target="main"
+                    class="cks">需求获取工作</a><img class="icon5" src="../static/img/coin21.png"/>
+            </dd>
+            <dd>
+                <img class="coin11" src="../static/img/coin111.png"/><img class="coin22"
+                                                                          src="../static/img/coin222.png"/><a
+                    href="{% url 'addstory' %}" target="main"
+                    class="cks">生成用户故事</a><img class="icon5" src="../static/img/coin21.png"/>
+            </dd>
+            <dd>
+                <img class="coin11" src="../static/img/coin111.png"/><img class="coin22"
+                                                                          src="../static/img/coin222.png"/><a
+                    href="{% url 'requdome' %}" target="main"
+                    class="cks">生成需求报告</a><img class="icon5" src="../static/img/coin21.png"/>
+            </dd>
+
+        </dl>
+    </div>
+
+</div>
+</body>
+</html>

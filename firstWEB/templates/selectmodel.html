@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../static/css/haiersoft.css" rel="stylesheet" type="text/css" media="screen,print"/>
+    <link href="../static/css/print.css" rel="stylesheet" type="text/css" media="print"/>
+    <style type="text/css">
+        .btn_box {
+            float: left
+        }
+    </style>
+
+</head>
+<body>
+<h2>请选择需求获取方式</h2>
+<hr>
+
+<div class="btn_box"><a href="{% url 'interview' %}"><input name="" type="button" value="用户访谈"></a></div>
+<div class="btn_box"><a href="{% url 'fieldwork' %}"><input name="" type="button" value="田野调查"></a></div>
+<div class="btn_box"><a href="{% url 'questionnaire' %}"><input name="" type="button" value="问卷调查"></a></div>
+
+<!--<div class="btn_boxB floatR mag_l20"><input name="" type="button" value="取消" ></div>-->
+<!--<div class="btn_box floatR"><input name="" type="button" value="提交" ></div>-->
+</body>
+</html>

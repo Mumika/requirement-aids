@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title></title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="generator" content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+    <link href="../static/css/haiersoft.css" rel="stylesheet" type="text/css" media="screen,print"/>
+    <link href="../static/css/print.css" rel="stylesheet" type="text/css" media="print"/>
+    <script src="../static/js/jquery-1.10.1.min.js"></script>
+    <script src="../static/js/side.js" type="text/javascript"></script>
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<!-- Popup -->
+<div id="Popup">
+
+    <!-- SubPopup -->
+    <div id="SubPopup">
+        <div class="form_boxD">
+            <form action="" method="post">
+                {% csrf_token %}
+                <table>
+                    <tr>
+                        <th>采访内容编号</th>
+                        <th><input type="text" name="itviewno"></th>
+                    </tr>
+                    <tr>
+                        <th>开发方问题</th>
+                        <th><textarea name="itviewque" cols="25" rows="5"></textarea></th>
+                    <tr>
+                        <th>甲方回答</th>
+                        <th><textarea name="itviewans" cols="25" rows="5"></textarea></th>
+                    </tr>
+                </table>
+                <div class="btn_box floatR"><input name="" type="submit" value="添加"></div>
+            </form>
+        </div>
+    </div>
+    <!-- SubPopup -->
+
+
+</div>
+<!-- /Popup -->
+</body>
+</html>
